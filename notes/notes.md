@@ -81,12 +81,17 @@ https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-e
     Set executable
   
        ec2@1221 chmod a+x ./kubectl
+    
        ec2@1221 mkdir bin
+    
        ec2@1221 cp ./kubectl $HOME/bin/kubectl
+    
        ec2@1221 export PATH=$HOME/bin:$PATH
+    
        ec2@2121 echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
     
-    Download aws-iam-authenticator
+    
+Download aws-iam-authenticator
 
 
       curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/aws-iam-authenticator
@@ -98,8 +103,6 @@ https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-e
    Associate iam with kubectl 
 
     aws eks update-kubeconfig --name eks-cluster
-
-
 
 
 
